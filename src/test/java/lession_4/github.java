@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class github {
 
@@ -15,8 +14,10 @@ public class github {
         open("https://github.com/selenide/selenide");
 
         $(".UnderlineNav-body").$(byText("Wiki")).click();
-        $(".markdown-body").shouldHave(text("Soft assertions"));
-        $(".markdown-body").$(byText("Soft assertions")).click();
+        $(".js-wiki-more-pages-link").click();
+        $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
+        $(".wiki-rightbar").$(byText("SoftAssertions")).click();
         $(".markdown-body").shouldHave(text("SoftAssertsExtension.class"));
+        sleep(5000);
     }
 }
