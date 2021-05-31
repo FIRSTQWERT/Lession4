@@ -17,7 +17,7 @@ public class github {
         //$(".js-wiki-more-pages-link").click();
         //$(".wiki-rightbar").shouldHave(text("SoftAssertions"));
         //$(".wiki-rightbar").$(byText("SoftAssertions")).click();
-        $(byText("SoftAssertions")).click();
+        $(byText("SoftAssertions")).click(); //У меня не работает
         $(".markdown-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
     }
 }
