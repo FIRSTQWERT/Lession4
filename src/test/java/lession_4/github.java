@@ -14,10 +14,12 @@ public class github {
         open("https://github.com/selenide/selenide");
 
         $(".UnderlineNav-body").$(byText("Wiki")).click();
-        $(".js-wiki-more-pages-link").click();
-        $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
-        $(".wiki-rightbar").$(byText("SoftAssertions")).click();
-        $(".markdown-body").shouldHave(text("SoftAssertsExtension.class"));
-        sleep(5000);
+        //$(".js-wiki-more-pages-link").click();
+        //$(".wiki-rightbar").shouldHave(text("SoftAssertions"));
+        //$(".wiki-rightbar").$(byText("SoftAssertions")).click();
+        $(byText("SoftAssertions")).click();
+
+        $(".markdown-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
+
     }
 }
