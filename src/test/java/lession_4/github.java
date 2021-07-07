@@ -14,10 +14,9 @@ public class github {
         open("https://github.com/selenide/selenide");
 
         $(".UnderlineNav-body").$(byText("Wiki")).click();
-        //$(".js-wiki-more-pages-link").click();
-        //$(".wiki-rightbar").shouldHave(text("SoftAssertions"));
-        //$(".wiki-rightbar").$(byText("SoftAssertions")).click();
-        $(byText("SoftAssertions")).click(); //У меня не работает
-        $(".markdown-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
-    }
+        $(".js-wiki-more-pages-link").click();
+        $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
+        $(".wiki-rightbar").$(byText("SoftAssertions")).click();
+        $(".markdown-body").shouldHave(text("Using JUnit5 extend test class:")); //Заменено по требованию проверяющего "Using JUnit5 extend test class:" вместо "SoftAssertsExtension.class"
+        }
 }
