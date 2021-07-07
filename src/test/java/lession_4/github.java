@@ -18,6 +18,5 @@ public class github {
         $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
         $(".wiki-rightbar").$(byText("SoftAssertions")).click();
         $(".markdown-body").shouldHave(text("SoftAssertsExtension.class"));
-        sleep(5000);
-    }
+        }
 }
