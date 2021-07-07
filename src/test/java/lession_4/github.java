@@ -17,6 +17,6 @@ public class github {
         $(".js-wiki-more-pages-link").click();
         $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
         $(".wiki-rightbar").$(byText("SoftAssertions")).click();
-        $(".markdown-body").shouldHave(text("SoftAssertsExtension.class"));
+        $(".markdown-body").shouldHave(text("SoftAssertsExtension.class")); //Заменено по требованию проверяющего "Using JUnit5 extend test class:" вместо "SoftAssertsExtension.class"
         }
 }
